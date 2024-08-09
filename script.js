@@ -100,4 +100,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     socket = startFaceDetection(video, canvas, deviceId);
   });
 
+    // Stop face detection on stop button click
+    document.getElementById('button-stop').addEventListener('click', (event) => {
+      socket.close();
+      // then camera will be stopped
+//      startFaceDetection(video, canvas, deviceId);
+//        window.clearInterval(intervalId);
+//        video.pause();
+    });
+
 });
